@@ -6,6 +6,7 @@ OUT := build/main
 .PHONY : corganizer run
 
 corganizer:
+	mkdir -p build
 	$(CC) $(CFLAGS) $(src) -o $(OUT)
 run:
 	./$(OUT) $(filter-out $@,$(MAKECMDGOALS))
